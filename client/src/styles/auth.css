@@ -1,0 +1,64 @@
+:root {
+    --auth-container-bgr-color: rgb(20, 20, 20);
+}
+
+.background {
+    background-image: url("/images/gigbalance_img_2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    width: 480px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.home-buttons-container {
+    margin-top: 40px;
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-container, .register-container, .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bgr-color);
+    color: var(--main-font-color);
+    border-radius: 15px;
+}
+
+.register-container {
+    width: 400px;
+    height: 500px;
+}
+
+.login-form, .register-form {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-container {
+    width: 500px;
+    height: 400px;
+}
+
+.login-field, .register-field {
+    display: flex;
+    flex-direction: column;
+}

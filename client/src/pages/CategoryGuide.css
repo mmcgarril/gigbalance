@@ -1,0 +1,19 @@
+.category-info-container {
+    width: 90%;
+    margin: auto;
+}
+
+.category-info-table {
+    width: 100%;
+    background-color: var(--secondary-bgr-color);
+}
+
+
+.category-info-row {
+    height: 50px;
+}
+
+.category-info-row > td {
+    padding-left: 10px;
+    border: 2px, solid rgb(223, 223, 223);
+}

@@ -1,0 +1,74 @@
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-bgr-color);
+}
+
+.nav {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav > h3 {
+    text-align: center;
+}
+
+.nav > button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    width: 100%;
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.selected-page {
+    background-color: var(--tertiary-bgr-color);
+    color: var(--main-font-color);
+}
+
+.page-button:hover {
+    background-color: var(--highlight-color);
+    cursor: pointer;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 640px) {
+    .sidebar {
+        position: fixed;
+        top: 60;
+        left: 0;
+        width: 100%;
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+        z-index: 100;
+        background-color: var(--primary-bgr-color);
+    }
+
+    .sidebar.open {
+        transform: translateX(-100%);
+    }
+}

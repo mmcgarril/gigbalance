@@ -1,0 +1,243 @@
+:root {
+    --primary-bgr-color: rgb(0, 0, 0);
+    --secondary-bgr-color: rgb(30, 30, 30);
+    --tertiary-bgr-color: rgb(47, 46, 46);
+    --main-font-color: rgb(228, 228, 228);
+    --highlight-color: rgb(68, 67, 67);
+    --required-color: rgb(238, 51, 34);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--primary-bgr-color);
+    color: var(--main-font-color);
+}
+
+.main-header {
+    display: none;
+    position: sticky;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+    background-color: var(--secondary-bgr-color);
+}
+
+.main-header > h2 {
+    padding-bottom: 10px;
+}
+
+.menu-button {
+    background-color: var(--secondary-bgr-color);
+    color: var(--main-font-color);
+    border: none;
+    font-size: large;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content {
+    margin-left: 210px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upper-totals-container {
+    width: 70%;
+    min-width: 350px;
+    height: 300px;
+    margin: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.category-totals {
+    width: 80%;
+    max-width: 800px;
+    min-width: 350px;
+    background-color: var(--secondary-bgr-color);
+    margin: 10px;
+}
+
+.category-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.column {
+    min-width: 200px;
+    margin: -5px;
+}
+
+.col-item {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.category-name, .category-total {
+    font-size: 16px;
+}
+
+.button {
+    min-width: fit-content;
+    width: 90px;
+    padding: 8px;
+    font-size: 15px;
+    border: solid 2px var(--main-font-color);
+    border-radius: 10px;
+    background-color: var(--tertiary-bgr-color);
+    color: var(--main-font-color);
+    white-space: nowrap;
+}
+
+.button:hover {
+    background-color: var(--highlight-color);
+}
+
+
+.modal-container {
+    position: fixed;
+    inset: 0;
+    left: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+    
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: rgba(119, 119, 119, 0.5);
+    z-index: 1;
+}
+  
+.modal-content {
+    max-width: 70%;
+    min-width: 498px;
+    padding: 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-bgr-color);
+    border-radius: 10px;
+}
+
+.modal-overlay:hover {
+    cursor: pointer;
+} 
+
+input, select {
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: var(--tertiary-bgr-color);
+    color: var(--main-font-color);
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.required {
+    color: var(--required-color);
+}
+
+.submit-btn {
+    margin: auto;
+}
+
+.delete-window {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.delete-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 5px;
+}
+
+.mobile-display {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .main-header {
+        top: 0;
+        position: fixed;
+        display: flex;
+    }
+
+    .main-layout {
+        position: relative;
+        margin-top: 60px;
+        flex-direction: column;
+    }
+    
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .modal-container {
+        left: 0;
+    }
+
+    .modal-content {
+        min-width: 390px;
+    }
+
+    .desktop-display {
+        display: none;
+    }
+
+    .mobile-display {
+        display: inline;
+    }
+
+    .icon-button {
+        font-size: small;
+    }
+}
