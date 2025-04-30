@@ -56,13 +56,13 @@ const login = async (req, res) => {
 
         if (match) {  //sign JWT and send in cookie
             const token = jwt.sign({ id: foundUser._id }, process.env.JWT_SECRET,
-                { expiresIn: '1h'})
+                { expiresIn: '7d'})
             
             res.cookie('jwt', token, {
                 httpOnly: true,
                 secure: process.env.NODE_ENV === 'production',
-                sameSite: 'lax',
-                maxAge: 1 * 60 * 60 * 1000 // 1 hour
+                sameSite: 'None',
+                maxAge: 7* 24 * 60 * 60 * 1000 // 1 hour
             })
             res.status(201).json({message: 'Login successful'})
         } else {
