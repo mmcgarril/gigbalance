@@ -23,7 +23,8 @@ const register = async (req, res) => {
         if(savedUser) {
            const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET,
                 { expiresIn: '7d' })
-            
+                console.log('NODE_ENV:', process.env.NODE_ENV); // should log 'production'
+
             res.cookie('jwt', token, {
                 httpOnly: true,
                 secure: process.env.NODE_ENV === 'production',
