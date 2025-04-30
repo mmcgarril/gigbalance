@@ -20,7 +20,7 @@ export default function Home() {
     const fetchUser = async () => {
         try {
             //fetch user data, if ok then setUser, if not ok redirect to login
-            const res = await fetch('http://localhost:3000/api/dashboard', {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/dashboard`, {
                 method: 'GET',
                 credentials: 'include'
             })
