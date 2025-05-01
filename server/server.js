@@ -12,7 +12,7 @@ app.use(cookieParser());
 
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://gigbalance.netlify.app'
+    'https://gigbalance.vercel.app'
   ];
   
   app.use(cors({

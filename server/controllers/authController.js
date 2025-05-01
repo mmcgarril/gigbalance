@@ -62,7 +62,7 @@ const login = async (req, res) => {
                 httpOnly: true,
                 secure: process.env.NODE_ENV === 'production',
                 sameSite: 'None',
-                maxAge: 7* 24 * 60 * 60 * 1000 // 1 hour
+                maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
             })
             res.status(201).json({message: 'Login successful'})
         } else {
