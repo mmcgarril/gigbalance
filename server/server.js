@@ -12,8 +12,14 @@ const routes = require('./routes')
   ]; */
   
 app.use(cors({
-    origin: true,
-    credentials: true
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+          callback(null, true);
+        } else {
+          callback(new Error('Not allowed by CORS'));
+        }
+      },
+      credentials: true
 }));
 
 //middleware
