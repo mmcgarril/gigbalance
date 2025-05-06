@@ -6,10 +6,10 @@ require('dotenv').config()
 const cookieParser = require('cookie-parser')
 const routes = require('./routes')
 
-/* const allowedOrigins = [
+const allowedOrigins = [
     'http://localhost:5173',
     'https://gigbalance.vercel.app'
-  ]; */
+];
   
 app.use(cors({
     origin: function (origin, callback) {
