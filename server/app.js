@@ -22,6 +22,16 @@ app.use(cors({
       credentials: true
 }));
 
+app.use(async (req, res, next) => {
+  try {
+      await connectToDatabase();
+      next(); 
+  } catch (error) {
+      console.log('Database connection error:', error);
+      res.status(500).send('Database connection failed');
+  }
+});
+
 //middleware
 app.use(express.json())
 app.use(cookieParser());
