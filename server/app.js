@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const cookieParser = require('cookie-parser')
 const routes = require('./routes')
+const { connectToDatabase } = require('./db');
 
 const allowedOrigins = [
     'http://localhost:5173',
