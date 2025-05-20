@@ -12,7 +12,7 @@ export default function Dashboard() {
 
     const fetchTotals = async () => {
         try {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/expenses/totals/${user._id}`, {
+            const res = await fetch(`/api/expenses/totals/${user._id}`, {
                 method: "GET",
                 credentials: "include"
             })

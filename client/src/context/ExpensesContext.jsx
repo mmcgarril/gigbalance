@@ -14,7 +14,7 @@ export const ExpensesProvider = ({ children }) => {
     const fetchExpenses = async () => {
         try {
             //fetch expense data
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/expenses`, {
+            const res = await fetch('/api/expenses', {
                 method: 'GET',
                 credentials: 'include'
             })

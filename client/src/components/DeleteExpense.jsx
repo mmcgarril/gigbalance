@@ -8,7 +8,7 @@ export default function DeleteExpense(props) {
         e.preventDefault()
 
         try {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/expenses/${modalId}`, {
+            const res = await fetch(`/api/expenses/${modalId}`, {
                 method: "DELETE",
                 credentials: 'include'
             })

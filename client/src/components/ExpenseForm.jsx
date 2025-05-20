@@ -50,7 +50,7 @@ export default function ExpenseForm(props) {
 
     const addExpense = async () => {
         try {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/expenses`, {
+            const res = await fetch('/api/expenses', {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(formData),
@@ -75,7 +75,7 @@ export default function ExpenseForm(props) {
 
     const updateExpense = async () => {
         try {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/expenses/${modalId}`, {
+            const res = await fetch(`/api/expenses/${modalId}`, {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(formData),

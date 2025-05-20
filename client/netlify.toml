@@ -1,0 +1,8 @@
+[build]
+  publish = "dist"  # or your build output folder, e.g. "build" or "public"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://gigbalance-backend.onrender.com/api/:splat"
+  status = 200
+  force = true
