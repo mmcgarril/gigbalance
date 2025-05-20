@@ -1,5 +1,5 @@
 [build]
-  publish = "dist"  # or your build output folder, e.g. "build" or "public"
+  publish = "dist"
 
 [[redirects]]
   from = "/api/*"
