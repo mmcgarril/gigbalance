@@ -8,10 +8,11 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .home-container {
