@@ -15,7 +15,9 @@
 }
 
 .home-container {
-    width: 480px;
+    width: 100%;
+    max-width: 480px;
+    box-sizing: border-box;
     padding: 20px;
     flex-wrap: wrap;
 }
@@ -40,7 +42,9 @@
 }
 
 .register-container {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
     height: 500px;
 }
 
@@ -54,7 +58,9 @@
 }
 
 .login-container {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
     height: 400px;
 }
 
