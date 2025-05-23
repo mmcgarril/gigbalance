@@ -7,7 +7,7 @@ import Sidebar from "../components/Sidebar"
 import "./Home.css"
 
 export default function Home() {
-    const [ isSidebarOpen, setIsSidebarOpen ] = useState(true)
+    const [ isSidebarOpen, setIsSidebarOpen ] = useState(false)
     const { user, setUser } = useAuth()
     const { fetchExpenses } = useExpenses()
 
@@ -40,6 +40,14 @@ export default function Home() {
     useEffect(() => {
         fetchUser()
     }, [])
+
+    useEffect(() => {
+        if (isSidebarOpen) {
+            document.body.classList.add('sidebar-open')
+        } else {
+            document.body.classList.remove('sidebar-open')
+        }
+    }, [isSidebarOpen])
 
     return (
         <>

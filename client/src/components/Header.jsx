@@ -4,7 +4,7 @@ export default function Header(props) {
     return (
         <>
             <button className="menu-button" onClick={toggleSidebar}>
-                <i className={`fa-solid ${isSidebarOpen ? 'fa-bars' : 'fa-arrow-left'}`}></i>
+                <i className={`fa-solid ${isSidebarOpen ? 'fa-arrow-left' : 'fa-bars'}`}></i>
             </button>
             <h2>GigBalance</h2>
         </>

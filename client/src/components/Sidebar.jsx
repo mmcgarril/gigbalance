@@ -29,7 +29,7 @@ export default function Sidebar(props) {
     }
 
     return (
-        <div className="sidebar">
+        <>
             <div className="nav">
                 <h3>Hello {user?.username}!</h3>
                 <button className="button" onClick={logout}>Log out</button>
@@ -44,9 +44,7 @@ export default function Sidebar(props) {
             </div>
             <div className="logo">
                 <h2>GigBalance</h2>
-            </div>
-            
-            
-        </div>
+            </div> 
+        </>
     )
 }

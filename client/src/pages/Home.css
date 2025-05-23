@@ -19,6 +19,15 @@ html, body {
     color: var(--main-font-color);
 }
 
+body.modal-open,
+html.modal-open,
+body.sidebar-open,
+html.sidebar-open {
+    position: fixed;
+    overflow-y: hidden;
+    width: 100%;
+}
+
 .main-header {
     display: none;
     position: sticky;
@@ -235,6 +244,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     .modal-content {
         min-width: 390px;
+        padding-top: 60px;
     }
 
     .desktop-display {

@@ -25,6 +25,14 @@ export default function ExpenseHistory() {
         setYear(e.target.value)
     }
 
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.classList.add('modal-open')
+        } else {
+            document.body.classList.remove('modal-open')
+        }
+    }, [isModalOpen])
+
     return (
         <>
             <div className="history-container">
