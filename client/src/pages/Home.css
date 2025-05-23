@@ -8,8 +8,7 @@
 }
 
 html, body {
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -45,8 +44,6 @@ html, body {
 }
 
 .main-layout {
-    width: 100%;
-    overflow-x: hidden;
     display: flex;
     flex-direction: row;
 }
@@ -54,7 +51,6 @@ html, body {
 .main-content {
     margin-left: 210px;
     width: 100%;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,7 +139,7 @@ html, body {
   
 .modal-content {
     max-width: 70%;
-    min-width: 350px;
+    min-width: 498px;
     padding: 30px;
     z-index: 2;
     display: flex;
